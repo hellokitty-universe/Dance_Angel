@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D6C18AE2D0DA22C0021A4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C18A32D0DA22C0021A4C6 /* Assets.xcassets */; };
+		5D6C18B02D0DA22C0021A4C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C18A62D0DA22C0021A4C6 /* LaunchScreen.storyboard */; };
+		5D6C18B12D0DA22C0021A4C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C18A72D0DA22C0021A4C6 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DB33C062CD7170B00244F30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DB33BE72CD7170800244F30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DB33BEE2CD7170800244F30;
+			remoteInfo = "Dance Angel";
+		};
+		5DB33C102CD7170B00244F30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DB33BE72CD7170800244F30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DB33BEE2CD7170800244F30;
+			remoteInfo = "Dance Angel";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5D6C18A32D0DA22C0021A4C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D6C18AA2D0DA22C0021A4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D6C18AB2D0DA22C0021A4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DB33BEF2CD7170800244F30 /* Dance Angel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dance Angel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB33C052CD7170B00244F30 /* Dance AngelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dance AngelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB33C0F2CD7170B00244F30 /* Dance AngelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dance AngelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5D6C18C82D0DB36B0021A4C6 /* Exceptions for "Dance Angel" folder in "Dance Angel" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5DB33BEE2CD7170800244F30 /* Dance Angel */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5D6C18C02D0DA7A70021A4C6 /* Fonts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5DB33BF12CD7170800244F30 /* Dance Angel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5D6C18C82D0DB36B0021A4C6 /* Exceptions for "Dance Angel" folder in "Dance Angel" target */,
+			);
+			path = "Dance Angel";
+			sourceTree = "<group>";
+		};
+		5DB33C082CD7170B00244F30 /* Dance AngelTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Dance AngelTests";
+			sourceTree = "<group>";
+		};
+		5DB33C122CD7170B00244F30 /* Dance AngelUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Dance AngelUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DB33BEC2CD7170800244F30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB33C022CD7170B00244F30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB33C0C2CD7170B00244F30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DB33BE62CD7170800244F30 = {
+			isa = PBXGroup;
+			children = (
+				5DB33BF12CD7170800244F30 /* Dance Angel */,
+				5D6C18A32D0DA22C0021A4C6 /* Assets.xcassets */,
+				5D6C18A62D0DA22C0021A4C6 /* LaunchScreen.storyboard */,
+				5D6C18A72D0DA22C0021A4C6 /* Main.storyboard */,
+				5D6C18C02D0DA7A70021A4C6 /* Fonts */,
+				5DB33C082CD7170B00244F30 /* Dance AngelTests */,
+				5DB33C122CD7170B00244F30 /* Dance AngelUITests */,
+				5DB33BF02CD7170800244F30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DB33BF02CD7170800244F30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DB33BEF2CD7170800244F30 /* Dance Angel.app */,
+				5DB33C052CD7170B00244F30 /* Dance AngelTests.xctest */,
+				5DB33C0F2CD7170B00244F30 /* Dance AngelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DB33BEE2CD7170800244F30 /* Dance Angel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DB33C182CD7170B00244F30 /* Build configuration list for PBXNativeTarget "Dance Angel" */;
+			buildPhases = (
+				5DB33BEB2CD7170800244F30 /* Sources */,
+				5DB33BEC2CD7170800244F30 /* Frameworks */,
+				5DB33BED2CD7170800244F30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5D6C18C02D0DA7A70021A4C6 /* Fonts */,
+				5DB33BF12CD7170800244F30 /* Dance Angel */,
+			);
+			name = "Dance Angel";
+			packageProductDependencies = (
+			);
+			productName = "Dance Angel";
+			productReference = 5DB33BEF2CD7170800244F30 /* Dance Angel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DB33C042CD7170B00244F30 /* Dance AngelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DB33C1D2CD7170B00244F30 /* Build configuration list for PBXNativeTarget "Dance AngelTests" */;
+			buildPhases = (
+				5DB33C012CD7170B00244F30 /* Sources */,
+				5DB33C022CD7170B00244F30 /* Frameworks */,
+				5DB33C032CD7170B00244F30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DB33C072CD7170B00244F30 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5DB33C082CD7170B00244F30 /* Dance AngelTests */,
+			);
+			name = "Dance AngelTests";
+			packageProductDependencies = (
+			);
+			productName = "Dance AngelTests";
+			productReference = 5DB33C052CD7170B00244F30 /* Dance AngelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5DB33C0E2CD7170B00244F30 /* Dance AngelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DB33C202CD7170B00244F30 /* Build configuration list for PBXNativeTarget "Dance AngelUITests" */;
+			buildPhases = (
+				5DB33C0B2CD7170B00244F30 /* Sources */,
+				5DB33C0C2CD7170B00244F30 /* Frameworks */,
+				5DB33C0D2CD7170B00244F30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DB33C112CD7170B00244F30 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5DB33C122CD7170B00244F30 /* Dance AngelUITests */,
+			);
+			name = "Dance AngelUITests";
+			packageProductDependencies = (
+			);
+			productName = "Dance AngelUITests";
+			productReference = 5DB33C0F2CD7170B00244F30 /* Dance AngelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DB33BE72CD7170800244F30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					5DB33BEE2CD7170800244F30 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					5DB33C042CD7170B00244F30 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 5DB33BEE2CD7170800244F30;
+					};
+					5DB33C0E2CD7170B00244F30 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 5DB33BEE2CD7170800244F30;
+					};
+				};
+			};
+			buildConfigurationList = 5DB33BEA2CD7170800244F30 /* Build configuration list for PBXProject "Dance Angel" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DB33BE62CD7170800244F30;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5DB33BF02CD7170800244F30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DB33BEE2CD7170800244F30 /* Dance Angel */,
+				5DB33C042CD7170B00244F30 /* Dance AngelTests */,
+				5DB33C0E2CD7170B00244F30 /* Dance AngelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DB33BED2CD7170800244F30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D6C18AE2D0DA22C0021A4C6 /* Assets.xcassets in Resources */,
+				5D6C18B02D0DA22C0021A4C6 /* LaunchScreen.storyboard in Resources */,
+				5D6C18B12D0DA22C0021A4C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB33C032CD7170B00244F30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB33C0D2CD7170B00244F30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DB33BEB2CD7170800244F30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB33C012CD7170B00244F30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB33C0B2CD7170B00244F30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DB33C072CD7170B00244F30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DB33BEE2CD7170800244F30 /* Dance Angel */;
+			targetProxy = 5DB33C062CD7170B00244F30 /* PBXContainerItemProxy */;
+		};
+		5DB33C112CD7170B00244F30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DB33BEE2CD7170800244F30 /* Dance Angel */;
+			targetProxy = 5DB33C102CD7170B00244F30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5D6C18A62D0DA22C0021A4C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D6C18AB2D0DA22C0021A4C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5D6C18A72D0DA22C0021A4C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D6C18AA2D0DA22C0021A4C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DB33C192CD7170B00244F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dance Angel/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Angel-Kitty.Dance-Angel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DB33C1A2CD7170B00244F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dance Angel/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Angel-Kitty.Dance-Angel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5DB33C1B2CD7170B00244F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5DB33C1C2CD7170B00244F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DB33C1E2CD7170B00244F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Angel-Kitty.Dance-AngelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dance Angel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dance Angel";
+			};
+			name = Debug;
+		};
+		5DB33C1F2CD7170B00244F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Angel-Kitty.Dance-AngelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dance Angel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dance Angel";
+			};
+			name = Release;
+		};
+		5DB33C212CD7170B00244F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Angel-Kitty.Dance-AngelUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dance Angel";
+			};
+			name = Debug;
+		};
+		5DB33C222CD7170B00244F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Angel-Kitty.Dance-AngelUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dance Angel";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DB33BEA2CD7170800244F30 /* Build configuration list for PBXProject "Dance Angel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB33C1B2CD7170B00244F30 /* Debug */,
+				5DB33C1C2CD7170B00244F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DB33C182CD7170B00244F30 /* Build configuration list for PBXNativeTarget "Dance Angel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB33C192CD7170B00244F30 /* Debug */,
+				5DB33C1A2CD7170B00244F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DB33C1D2CD7170B00244F30 /* Build configuration list for PBXNativeTarget "Dance AngelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB33C1E2CD7170B00244F30 /* Debug */,
+				5DB33C1F2CD7170B00244F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DB33C202CD7170B00244F30 /* Build configuration list for PBXNativeTarget "Dance AngelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB33C212CD7170B00244F30 /* Debug */,
+				5DB33C222CD7170B00244F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DB33BE72CD7170800244F30 /* Project object */;
+}
