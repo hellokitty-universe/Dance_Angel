@@ -6,12 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		5D6C18AE2D0DA22C0021A4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C18A32D0DA22C0021A4C6 /* Assets.xcassets */; };
-		5D6C18B02D0DA22C0021A4C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C18A62D0DA22C0021A4C6 /* LaunchScreen.storyboard */; };
-		5D6C18B12D0DA22C0021A4C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C18A72D0DA22C0021A4C6 /* Main.storyboard */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		5DB33C062CD7170B00244F30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -30,9 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D6C18A32D0DA22C0021A4C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5D6C18AA2D0DA22C0021A4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5D6C18AB2D0DA22C0021A4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DB33BEF2CD7170800244F30 /* Dance Angel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dance Angel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB33C052CD7170B00244F30 /* Dance AngelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dance AngelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB33C0F2CD7170B00244F30 /* Dance AngelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dance AngelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,27 +40,12 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5D6C18C02D0DA7A70021A4C6 /* Fonts */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		5DB33BF12CD7170800244F30 /* Dance Angel */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				5D6C18C82D0DB36B0021A4C6 /* Exceptions for "Dance Angel" folder in "Dance Angel" target */,
 			);
 			path = "Dance Angel";
-			sourceTree = "<group>";
-		};
-		5DB33C082CD7170B00244F30 /* Dance AngelTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Dance AngelTests";
-			sourceTree = "<group>";
-		};
-		5DB33C122CD7170B00244F30 /* Dance AngelUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Dance AngelUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -103,12 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				5DB33BF12CD7170800244F30 /* Dance Angel */,
-				5D6C18A32D0DA22C0021A4C6 /* Assets.xcassets */,
-				5D6C18A62D0DA22C0021A4C6 /* LaunchScreen.storyboard */,
-				5D6C18A72D0DA22C0021A4C6 /* Main.storyboard */,
-				5D6C18C02D0DA7A70021A4C6 /* Fonts */,
-				5DB33C082CD7170B00244F30 /* Dance AngelTests */,
-				5DB33C122CD7170B00244F30 /* Dance AngelUITests */,
 				5DB33BF02CD7170800244F30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,7 +109,6 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5D6C18C02D0DA7A70021A4C6 /* Fonts */,
 				5DB33BF12CD7170800244F30 /* Dance Angel */,
 			);
 			name = "Dance Angel";
@@ -162,9 +131,6 @@
 			dependencies = (
 				5DB33C072CD7170B00244F30 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				5DB33C082CD7170B00244F30 /* Dance AngelTests */,
-			);
 			name = "Dance AngelTests";
 			packageProductDependencies = (
 			);
@@ -184,9 +150,6 @@
 			);
 			dependencies = (
 				5DB33C112CD7170B00244F30 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5DB33C122CD7170B00244F30 /* Dance AngelUITests */,
 			);
 			name = "Dance AngelUITests";
 			packageProductDependencies = (
@@ -244,9 +207,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6C18AE2D0DA22C0021A4C6 /* Assets.xcassets in Resources */,
-				5D6C18B02D0DA22C0021A4C6 /* LaunchScreen.storyboard in Resources */,
-				5D6C18B12D0DA22C0021A4C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,25 +262,6 @@
 			targetProxy = 5DB33C102CD7170B00244F30 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5D6C18A62D0DA22C0021A4C6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D6C18AB2D0DA22C0021A4C6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		5D6C18A72D0DA22C0021A4C6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D6C18AA2D0DA22C0021A4C6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5DB33C192CD7170B00244F30 /* Debug */ = {
