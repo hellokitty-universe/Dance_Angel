@@ -25,11 +25,6 @@ class LaunchView2: BaseViewController {
         headlineLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headlineLabel)
         
-        // Add underheadline label
-        let underheadlineLabel = CustomLabel(style: .generalText)
-        underheadlineLabel.text = "(P.S. with other Angels)"
-        underheadlineLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(underheadlineLabel)
         
         let continueButton = ActionPlaceholder(title: "Continue".uppercased())
         continueButton.addTarget(self, action: #selector(navigateToNextScreen), for: .touchUpInside)
@@ -47,9 +42,6 @@ class LaunchView2: BaseViewController {
             headlineLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),        // Center on x-axis
             headlineLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 126), // Y = 126
             
-            // Center and position the underheadline label
-            underheadlineLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),           // Center on x-axis
-            underheadlineLabel.topAnchor.constraint(equalTo: headlineLabel.bottomAnchor, constant: 20), // Below the headline
             
             // Position and size for the rectangle button
             continueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),  // Center on x-axis

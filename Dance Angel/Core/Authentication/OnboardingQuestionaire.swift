@@ -27,8 +27,8 @@ class OnboardingQuestionaire: BaseViewController {
         // Create the multiple-choice options using ChoicePlaceholder
         let dancerChoice = ChoicePlaceholder(title: "Dancer")
         let choreographerChoice = ChoicePlaceholder(title: "Choreographer")
-        let studioOwnerChoice = ChoicePlaceholder(title: "Owner/Manager of Dance Studio")
-        let rentalOwnerChoice = ChoicePlaceholder(title: "Owner of Rental Dance Space")
+        let studioOwnerChoice = ChoicePlaceholder(title: "Dance Studio")
+        let rentalOwnerChoice = ChoicePlaceholder(title: "Rental Dance Space")
         let otherChoice = ChoicePlaceholder(title: "Other")
         
         // Add placeholders to the view

@@ -40,8 +40,8 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
         view.addSubview(registerButton)
         
         // Add credentials placeholders
-        let fullNamePlaceholder = CredentialsPlaceholder(placeholder: "Full Name or Company Name")
-        let emailPlaceholder = CredentialsPlaceholder(placeholder: "Email")
+        let fullNamePlaceholder = CredentialsPlaceholder(placeholder: "Full Name")
+        let emailPlaceholder = CredentialsPlaceholder(placeholder: "Email or Phone Number")
         let passwordPlaceholder = CredentialsPlaceholder(placeholder: "Password", isSecure: true)
         let confirmPasswordPlaceholder = CredentialsPlaceholder(placeholder: "Confirm Password", isSecure: true)
         
@@ -221,8 +221,8 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
     
     @objc func navigateToNextScreen() {
         // Fetch the text values from all placeholders
-        let fullName = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Full Name or Company Name" } as? CredentialsPlaceholder)?.textField.text
-        let email = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Email" } as? CredentialsPlaceholder)?.textField.text
+        let fullName = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Full Name" } as? CredentialsPlaceholder)?.textField.text
+        let email = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Email or Phone Number" } as? CredentialsPlaceholder)?.textField.text
         let password = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Password" } as? CredentialsPlaceholder)?.textField.text
         let confirmPassword = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Confirm Password" } as? CredentialsPlaceholder)?.textField.text
         
@@ -230,7 +230,7 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
         
         // Validate Full Name
         if fullName?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true {
-            showFullNameError(show: true, message: "Please enter your full name or company name")
+            showFullNameError(show: true, message: "Please give your full name")
             hasErrors = true
         } else {
             showFullNameError(show: false)
