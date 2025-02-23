@@ -9,53 +9,46 @@ import UIKit
 
 class RegisterMain: BaseViewController, UITextFieldDelegate {
     
-    private let emailErrorLabel = ErrorLabel() // Reusable error label for email
-    private let passwordErrorLabel = ErrorLabel() // Reusable error label for password
-    private let confirmPasswordErrorLabel = ErrorLabel() // Reusable error label for confirm password
-    private let fullNameErrorLabel = ErrorLabel() // Reusable error label for full name
+    private let firstNameErrorLabel = ErrorLabel() // Error label for first name
+    private let lastNameErrorLabel = ErrorLabel() // Error label for last name
+    private let emailErrorLabel = ErrorLabel() // Error label for email
     
-    private var passwordPlaceholderTopConstraint: NSLayoutConstraint!
+    private var firstNameErrorLabelHeightConstraint: NSLayoutConstraint!
+    private var lastNameErrorLabelHeightConstraint: NSLayoutConstraint!
     private var emailErrorLabelHeightConstraint: NSLayoutConstraint!
-    private var passwordErrorLabelHeightConstraint: NSLayoutConstraint!
-    private var confirmPasswordErrorLabelHeightConstraint: NSLayoutConstraint!
-    private var fullNameErrorLabelHeightConstraint: NSLayoutConstraint!
+    private var lastNamePlaceholderTopConstraint: NSLayoutConstraint!
     private var emailPlaceholderTopConstraint: NSLayoutConstraint!
-    private var confirmPasswordPlaceholderTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up the error labels
+        // Set up error labels
+        firstNameErrorLabel.isHidden = true
+        lastNameErrorLabel.isHidden = true
         emailErrorLabel.isHidden = true
-        passwordErrorLabel.isHidden = true
-        confirmPasswordErrorLabel.isHidden = true
-        fullNameErrorLabel.isHidden = true
-        view.addSubview(emailErrorLabel)
-        view.addSubview(passwordErrorLabel)
-        view.addSubview(confirmPasswordErrorLabel)
-        view.addSubview(fullNameErrorLabel)
         
-        let registerButton = ActionPlaceholder(title: "Register".uppercased())
+        view.addSubview(firstNameErrorLabel)
+        view.addSubview(lastNameErrorLabel)
+        view.addSubview(emailErrorLabel)
+        
+        let registerButton = ActionPlaceholder(title: "Sign up".uppercased())
         registerButton.addTarget(self, action: #selector(navigateToNextScreen), for: .touchUpInside)
         view.addSubview(registerButton)
         
         // Add credentials placeholders
-        let fullNamePlaceholder = CredentialsPlaceholder(placeholder: "Full Name")
-        let emailPlaceholder = CredentialsPlaceholder(placeholder: "Email or Phone Number")
-        let passwordPlaceholder = CredentialsPlaceholder(placeholder: "Password", isSecure: true)
-        let confirmPasswordPlaceholder = CredentialsPlaceholder(placeholder: "Confirm Password", isSecure: true)
+        let firstNamePlaceholder = CredentialsPlaceholder(placeholder: "First Name")
+        let lastNamePlaceholder = CredentialsPlaceholder(placeholder: "Last Name")
+        let emailPlaceholder = CredentialsPlaceholder(placeholder: "Email")
         
-        // Assign the text field delegate for validation
-        fullNamePlaceholder.textField.delegate = self
+        // Assign text field delegates
+        firstNamePlaceholder.textField.delegate = self
+        lastNamePlaceholder.textField.delegate = self
         emailPlaceholder.textField.delegate = self
-        passwordPlaceholder.textField.delegate = self
-        confirmPasswordPlaceholder.textField.delegate = self
         
         // Add placeholders to the view
-        view.addSubview(fullNamePlaceholder)
+        view.addSubview(firstNamePlaceholder)
+        view.addSubview(lastNamePlaceholder)
         view.addSubview(emailPlaceholder)
-        view.addSubview(passwordPlaceholder)
-        view.addSubview(confirmPasswordPlaceholder)
         
         // Add login question
         let loginQuestion = CustomLabel(style: .secondaryText)
@@ -65,51 +58,47 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
         view.addSubview(loginQuestion)
         
         // Add constraints
-        fullNameErrorLabelHeightConstraint = fullNameErrorLabel.heightAnchor.constraint(equalToConstant: 0)
+        firstNameErrorLabelHeightConstraint = firstNameErrorLabel.heightAnchor.constraint(equalToConstant: 0)
+        lastNameErrorLabelHeightConstraint = lastNameErrorLabel.heightAnchor.constraint(equalToConstant: 0)
         emailErrorLabelHeightConstraint = emailErrorLabel.heightAnchor.constraint(equalToConstant: 0)
-        passwordErrorLabelHeightConstraint = passwordErrorLabel.heightAnchor.constraint(equalToConstant: 0)
-        confirmPasswordErrorLabelHeightConstraint = confirmPasswordErrorLabel.heightAnchor.constraint(equalToConstant: 0)
-        emailPlaceholderTopConstraint = emailPlaceholder.topAnchor.constraint(equalTo: fullNamePlaceholder.bottomAnchor, constant: 30)
-        passwordPlaceholderTopConstraint = passwordPlaceholder.topAnchor.constraint(equalTo: emailPlaceholder.bottomAnchor, constant: 30)
-        confirmPasswordPlaceholderTopConstraint = confirmPasswordPlaceholder.topAnchor.constraint(equalTo: passwordPlaceholder.bottomAnchor, constant: 30)
+        
+        lastNamePlaceholderTopConstraint = lastNamePlaceholder.topAnchor.constraint(equalTo: firstNamePlaceholder.bottomAnchor, constant: 30)
+        emailPlaceholderTopConstraint = emailPlaceholder.topAnchor.constraint(equalTo: lastNamePlaceholder.bottomAnchor, constant: 30)
         
         NSLayoutConstraint.activate([
             // Register button constraints
+            // Continue button constraints
             registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            registerButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 765),
+            registerButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            registerButton.widthAnchor.constraint(equalToConstant: 264),
+            registerButton.heightAnchor.constraint(equalToConstant: 50),
             
-            // Credentials placeholders constraints
-            fullNamePlaceholder.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            fullNamePlaceholder.topAnchor.constraint(equalTo: view.topAnchor, constant: 240),
+            // First Name Placeholder
+            firstNamePlaceholder.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            firstNamePlaceholder.topAnchor.constraint(equalTo: view.topAnchor, constant: 240),
             
-            // Full Name error label constraints
-            fullNameErrorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
-            fullNameErrorLabel.topAnchor.constraint(equalTo: fullNamePlaceholder.bottomAnchor, constant: 10),
-            fullNameErrorLabelHeightConstraint,
+            // First Name Error Label
+            firstNameErrorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
+            firstNameErrorLabel.topAnchor.constraint(equalTo: firstNamePlaceholder.bottomAnchor, constant: 10),
+            firstNameErrorLabelHeightConstraint,
             
+            // Last Name Placeholder
+            lastNamePlaceholder.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lastNamePlaceholderTopConstraint,
+            
+            // Last Name Error Label
+            lastNameErrorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
+            lastNameErrorLabel.topAnchor.constraint(equalTo: lastNamePlaceholder.bottomAnchor, constant: 10),
+            lastNameErrorLabelHeightConstraint,
+            
+            // Email Placeholder
             emailPlaceholder.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emailPlaceholderTopConstraint,
             
-            // Email error label constraints
+            // Email Error Label
             emailErrorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
             emailErrorLabel.topAnchor.constraint(equalTo: emailPlaceholder.bottomAnchor, constant: 10),
             emailErrorLabelHeightConstraint,
-            
-            passwordPlaceholder.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            passwordPlaceholderTopConstraint,
-            
-            // Password error label constraints
-            passwordErrorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
-            passwordErrorLabel.topAnchor.constraint(equalTo: passwordPlaceholder.bottomAnchor, constant: 10),
-            passwordErrorLabelHeightConstraint,
-            
-            confirmPasswordPlaceholder.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            confirmPasswordPlaceholderTopConstraint,
-            
-            // Confirm password error label constraints
-            confirmPasswordErrorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
-            confirmPasswordErrorLabel.topAnchor.constraint(equalTo: confirmPasswordPlaceholder.bottomAnchor, constant: 10),
-            confirmPasswordErrorLabelHeightConstraint,
             
             // Login question constraints
             loginQuestion.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -117,14 +106,22 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
         ])
     }
     
-    // Validate full name, email, and password format
+    // MARK: - Validation
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField.placeholder == "Full Name or Company Name" {
-            guard let fullName = textField.text, !fullName.trimmingCharacters(in: .whitespaces).isEmpty else {
-                showFullNameError(show: true, message: "Please enter your full name or company name")
+        if textField.placeholder == "First Name" {
+            guard let firstName = textField.text, !firstName.trimmingCharacters(in: .whitespaces).isEmpty else {
+                showFirstNameError(show: true, message: "Please enter your first name")
                 return
             }
-            showFullNameError(show: false)
+            showFirstNameError(show: false)
+        }
+        
+        if textField.placeholder == "Last Name" {
+            guard let lastName = textField.text, !lastName.trimmingCharacters(in: .whitespaces).isEmpty else {
+                showLastNameError(show: true, message: "Please enter your last name")
+                return
+            }
+            showLastNameError(show: false)
         }
         
         if textField.placeholder == "Email" {
@@ -133,14 +130,6 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
                 return
             }
             showEmailError(show: false)
-        }
-        
-        if textField.placeholder == "Password" {
-            guard let password = textField.text, isValidPassword(password) else {
-                showPasswordError(show: true, message: "Password must be at least 8 characters")
-                return
-            }
-            showPasswordError(show: false)
         }
     }
     
@@ -151,20 +140,31 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
         return emailPredicate.evaluate(with: email)
     }
     
-    private func isValidPassword(_ password: String) -> Bool {
-        // Password validation: minimum 8 characters
-        return password.count >= 8
+    private func showFirstNameError(show: Bool, message: String = "") {
+        if show {
+            firstNameErrorLabel.setErrorMessage(message)
+            lastNamePlaceholderTopConstraint.constant = 55
+            firstNameErrorLabelHeightConstraint.constant = 30
+            firstNameErrorLabel.isHidden = false
+        } else {
+            firstNameErrorLabelHeightConstraint.constant = 0
+            lastNamePlaceholderTopConstraint.constant = 30
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
     
-    private func showFullNameError(show: Bool, message: String = "") {
+    private func showLastNameError(show: Bool, message: String = "") {
         if show {
-            fullNameErrorLabel.setErrorMessage(message)
-            emailPlaceholderTopConstraint.constant = 55 // Adjust position of emailPlaceholder
-            fullNameErrorLabelHeightConstraint.constant = 30 // Show full name error label
-            fullNameErrorLabel.isHidden = false
+            lastNameErrorLabel.setErrorMessage(message)
+            emailPlaceholderTopConstraint.constant = 55
+            lastNameErrorLabelHeightConstraint.constant = 30
+            lastNameErrorLabel.isHidden = false
         } else {
-            fullNameErrorLabelHeightConstraint.constant = 0
-            emailPlaceholderTopConstraint.constant = 30 // Reset position of emailPlaceholder
+            lastNameErrorLabelHeightConstraint.constant = 0
+            emailPlaceholderTopConstraint.constant = 30
         }
         
         UIView.animate(withDuration: 0.3) {
@@ -175,43 +175,11 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
     private func showEmailError(show: Bool, message: String = "") {
         if show {
             emailErrorLabel.setErrorMessage(message)
-            passwordPlaceholderTopConstraint.constant = 55
             emailErrorLabelHeightConstraint.constant = 30
             emailErrorLabel.isHidden = false
         } else {
             emailErrorLabelHeightConstraint.constant = 0
-            passwordPlaceholderTopConstraint.constant = 30
-        }
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    private func showPasswordError(show: Bool, message: String = "") {
-        if show {
-            passwordErrorLabel.setErrorMessage(message)
-            confirmPasswordPlaceholderTopConstraint.constant = 55
-            passwordErrorLabelHeightConstraint.constant = 30
-            passwordErrorLabel.isHidden = false
-        } else {
-            passwordErrorLabelHeightConstraint.constant = 0
-            confirmPasswordPlaceholderTopConstraint.constant = 30
-        }
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    private func showConfirmPasswordError(show: Bool, message: String = "") {
-        if show {
-            confirmPasswordErrorLabel.setErrorMessage(message)
-            confirmPasswordErrorLabelHeightConstraint.constant = 30
-            confirmPasswordErrorLabel.isHidden = false
-        } else {
-            confirmPasswordErrorLabelHeightConstraint.constant = 0
-            confirmPasswordErrorLabel.isHidden = true
+            emailErrorLabel.isHidden = true
         }
         
         UIView.animate(withDuration: 0.3) {
@@ -220,20 +188,27 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
     }
     
     @objc func navigateToNextScreen() {
-        // Fetch the text values from all placeholders
-        let fullName = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Full Name" } as? CredentialsPlaceholder)?.textField.text
-        let email = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Email or Phone Number" } as? CredentialsPlaceholder)?.textField.text
-        let password = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Password" } as? CredentialsPlaceholder)?.textField.text
-        let confirmPassword = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Confirm Password" } as? CredentialsPlaceholder)?.textField.text
+        // Fetch text values from all placeholders
+        let firstName = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "First Name" } as? CredentialsPlaceholder)?.textField.text
+        let lastName = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Last Name" } as? CredentialsPlaceholder)?.textField.text
+        let email = (view.subviews.first { $0 is CredentialsPlaceholder && ($0 as! CredentialsPlaceholder).textField.placeholder == "Email" } as? CredentialsPlaceholder)?.textField.text
         
         var hasErrors = false
         
-        // Validate Full Name
-        if fullName?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true {
-            showFullNameError(show: true, message: "Please give your full name")
+        // Validate First Name
+        if firstName?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true {
+            showFirstNameError(show: true, message: "Please enter your first name")
             hasErrors = true
         } else {
-            showFullNameError(show: false)
+            showFirstNameError(show: false)
+        }
+        
+        // Validate Last Name
+        if lastName?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true {
+            showLastNameError(show: true, message: "Please enter your last name")
+            hasErrors = true
+        } else {
+            showLastNameError(show: false)
         }
         
         // Validate Email
@@ -244,26 +219,9 @@ class RegisterMain: BaseViewController, UITextFieldDelegate {
             showEmailError(show: false)
         }
         
-        // Validate Password
-        if !isValidPassword(password ?? "") {
-            showPasswordError(show: true, message: "Password must be at least 8 characters")
-            hasErrors = true
-        } else {
-            showPasswordError(show: false)
-        }
-        
-        // Validate Confirm Password
-        if password != confirmPassword {
-            showConfirmPasswordError(show: true, message: "Passwords do not match")
-            hasErrors = true
-        } else {
-            showConfirmPasswordError(show: false)
-        }
-        
-        // Navigate to the next screen only if there are no errors
         if !hasErrors {
             let registerLocation = RegisterLocation()
-            navigateTo(registerLocation) // Uses the smooth fade animation
+            navigateTo(registerLocation)
         }
     }
 }
